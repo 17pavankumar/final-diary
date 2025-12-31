@@ -273,7 +273,7 @@ class checkout(View):
 def payment_done(request):
     order_id = request.GET.get('order_id')
     payment_id = request.GET.get('payment_id')
-    cust_id = request.Get.get('cust_id')
+    cust_id = request.GET.get('cust_id')
     user = request.user
     customer = Customer.objects.get(id = cust_id)
     # To update payment status and payment id
